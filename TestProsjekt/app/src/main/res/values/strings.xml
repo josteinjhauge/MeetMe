@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestContentProvider</string>
+    <string name="contactID">kontakten sin ID</string>
+    <string name="show_contact">Vis kontakt</string>
+    <string name="header">Skriv inn kontaktens ID:</string>
+    <string name="showAllContacts">Vis alle kontakter</string>
+</resources>

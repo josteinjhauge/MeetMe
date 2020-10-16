@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">MeetMe</string>
+    <string name="contacts">Kontakter</string>
+    <string name="home">Hjem</string>
+    <string name="settings">Instillinger</string>
+    <string name="message">SMS Varsling</string>
+    <string name="message_on">SMS på</string>
+    <string name="message_off">SMS av</string>
+    <string name="add_meeting">Legg til møte</string>
+    <string name="add_contact">Legg til ny kontakt</string>
+    <string name="save">Lagre</string>
+    <string name="test">Test</string>
+    <string name="meeting_name">Møte navn</string>
+    <string name="contact_name">Navn</string>
+    <string name="contact_number">Telefonnr</string>
+    <string name="time">Klokkeslett start</string>
+    <string name="location">Sted</string>
+    <string name="register_meeting">Registrer Møte</string>
+    <string name="register_contact">Registrer kontakt</string>
+    <string name="update_meeting">Endre Møte</string>
+    <string name="update_contact">Endre Kontakt</string>
+    <string name="time_end">Klokkeslett slutt</string>
+    <string name="date">Dato</string>
+    <string name="start_time">Start tid</string>
+    <string name="end_time">Slutt tid</string>
+    <string name="btn_date">Velg dato</string>
+    <string name="input_val">Alle felter må fylles ut</string>
+    <string name="something_wrong_warning">Wops, noe gikk galt</string>
+    <string name="wrong_time_warning">Slutt må være etter start</string>
+    <string name="your_meeting">Ditt møte:</string>
+    <string name="cancel">Avbryt</string>
+    <string name="type">Type</string>
+    <string name="moter">Møter</string>
+    <string name="your_contact">Din kontakt</string>
+    <string name="input_name_val">Navnet er ugyldig</string>
+    <string name="input_phone_val">Telefonnummer må bestå av 8 siffer</string>
+    <string name="input_location_val">Stedsnavnet er ugyldig</string>
+    <string name="input_type_val">Møtetype er ugyldig</string>
+    <string name="input_empty_val">* Feltet må fylles ut</string>
+    <string name="edit_contact">Endre din Kontakt</string>
+    <string name="name">Navn</string>
+    <string name="phoneNumber">Telefonnr</string>
+    <string name="contactImage">Kontakt bilde</string>
+    <string name="meetingName">Møte navn</string>
+    <string name="timeSeperator">-</string>
+
+    <string name="delete">Slett</string>
+    <string name="noDataWarning">No data</string>
+    <string name="dateImage">dato ikon</string>
+    <string name="clockImage">tid ikon</string>
+    <string name="btn_meetingParties">Møtedeltakere</string>
+    <string name="check_symbol">check symbol</string>
+    <string name="select_meetingparties">Velg møtedeltagere</string>
+    <string name="meetingPart">deltager</string>
+    <string name="header_meetingparties">Møtedeltagere:</string>
+    <string name="alertTime">Tidspunkt for varsling</string>
+    <string name="notification">Her kommer notifikasjonstekst</string>
+    <string name="date_time_error">Dato/tid må settes først</string>
+
+
+</resources>

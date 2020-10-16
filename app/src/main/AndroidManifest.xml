@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.meetme">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <uses-permission android:name="com.example.meetme.permission"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- TODO: TROR IKKE DENNE TRENGS, Er for å kunne insert -->
+    <permission android:name="com.example.meetme.permission"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/meetme_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/meetme_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UpdateMeetingActivity"
+            android:parentActivityName=".MeetingsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MeetingsActivity" />
+        </activity>
+
+        <activity
+            android:name=".UpdateContactActivity"
+            android:parentActivityName=".ContactsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ContactsActivity" />
+        </activity>
+
+        <activity android:name=".SettingsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".MeetingsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ContactsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".NewContactActivity"
+            android:parentActivityName=".ContactsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ContactsActivity" />
+        </activity>
+
+        <activity
+            android:name=".NewMeetingActivity"
+            android:parentActivityName=".MeetingsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MeetingsActivity" />
+        </activity>
+
+        <activity
+            android:name=".MeetingPartiActivity"
+            android:parentActivityName=".NewMeetingActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NewMeetingActivity" />
+        </activity>
+
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MySMSService" />
+        <service android:name=".SetPeriodiskMySMSService"/>
+
+        <receiver android:name=".BroadcastReciver">
+            <intent-filter>
+                <action android:name="com.example.meetme.mybroadcast" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".MyNotificationService" />
+        <service android:name=".SetPeriodiskService"/>
+
+        <receiver android:name=".SecondBroadcastReciver">
+            <intent-filter>
+                <action android:name="com.example.meetme.secondbroadcast" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:authorities="com.example.meetme"
+            android:name="com.example.meetme.ContactContentProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.example.meetme.permission"
+            android:writePermission="com.example.meetme.permission"/>
+    </application>
+
+</manifest>

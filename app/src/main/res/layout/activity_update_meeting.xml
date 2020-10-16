@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateMeetingActivity"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/update_meeting"
+        android:textSize="22sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/meeting_name_update"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/meeting_name"
+        android:inputType="textNoSuggestions"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:autofillHints="@string/meeting_name" />
+
+    <TextView
+        android:id="@+id/update_meetingName_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/meeting_name_update"
+        app:layout_constraintTop_toBottomOf="@+id/meeting_name_update" />
+
+    <EditText
+        android:id="@+id/location_update"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/location"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/meeting_name_update"
+        app:layout_constraintStart_toStartOf="@+id/meeting_name_update"
+        app:layout_constraintTop_toBottomOf="@+id/meeting_name_update"
+        android:autofillHints="@string/location" />
+
+    <TextView
+        android:id="@+id/update_location_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/location_update"
+        app:layout_constraintTop_toBottomOf="@+id/location_update" />
+
+    <EditText
+        android:id="@+id/type_update"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/type"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/meeting_name_update"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/meeting_name_update"
+        app:layout_constraintTop_toBottomOf="@+id/location_update"
+        android:autofillHints="@string/type" />
+
+    <TextView
+        android:id="@+id/update_type_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/type_update"
+        app:layout_constraintTop_toBottomOf="@+id/type_update" />
+
+    <Button
+        android:id="@+id/btn_time_start_update"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_date_update"
+        android:layout_alignStart="@+id/btn_date_update"
+        android:layout_marginTop="20dp"
+        android:text="@string/start_time"
+        app:layout_constraintStart_toStartOf="@+id/btn_date_update"
+        app:layout_constraintTop_toBottomOf="@+id/btn_date_update" />
+
+    <TextView
+        android:id="@+id/update_startTime_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/btn_time_start_update"
+        app:layout_constraintTop_toBottomOf="@+id/btn_time_start_update" />
+
+    <Button
+        android:id="@+id/btn_time_end_update"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_date_update"
+        android:layout_alignStart="@+id/btn_date_update"
+        android:layout_marginTop="20dp"
+        android:text="@string/end_time"
+        app:layout_constraintStart_toStartOf="@+id/btn_time_start_update"
+        app:layout_constraintTop_toBottomOf="@+id/btn_time_start_update" />
+
+    <TextView
+        android:id="@+id/update_endTime_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/btn_time_end_update"
+        app:layout_constraintTop_toBottomOf="@+id/btn_time_end_update" />
+
+    <Button
+        android:id="@+id/btn_date_update"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/btn_date"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/update_date_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/btn_date_update"
+        app:layout_constraintTop_toBottomOf="@+id/btn_date_update" />
+
+
+    <TextView
+        android:id="@+id/header_meetingParties_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="284dp"
+        android:gravity="center"
+        android:text="@string/header_meetingparties"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/meetingParties_listview_update"
+        android:layout_width="358dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_update" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
